@@ -1,0 +1,137 @@
+* {
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important;
+  margin: 0;
+}
+
+body {
+  background-color: #fc8424 !important;
+}
+
+.modal-open {
+  padding-right: 0 !important;
+}
+
+.login-parent {
+  -webkit-filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+          filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+}
+
+.login-container {
+  margin: 0;
+  height: 110vh;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Lato', 'sans-serif';
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #555;
+  background-color: #ecf0f3;
+  -webkit-clip-path: circle(66% at 49.5% 0);
+          clip-path: circle(66% at 49.5% 0);
+}
+
+.login-div {
+  width: 430px;
+  height: 720px;
+  padding: 20px 35px 35px 35px;
+  border-radius: 40px;
+  margin-top: -80px;
+  background: #ecf0f3;
+  -webkit-box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+          box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+}
+
+.logo {
+  background: url("microsip.png");
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-size: initial;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 0px 0px #5f5f5f, 0px 0px 0px 5px #ecf0f3, 8px 8px 15px #a7aaaf, -8px -8px 15px #ffffff;
+          box-shadow: 0px 0px 0px #5f5f5f, 0px 0px 0px 5px #ecf0f3, 8px 8px 15px #a7aaaf, -8px -8px 15px #ffffff;
+}
+
+.title {
+  text-align: center;
+  font-size: 28px;
+  padding-top: 24px;
+  letter-spacing: 0.5px;
+}
+
+.sub-title {
+  text-align: center;
+  font-size: 15px;
+  padding-top: 7px;
+  letter-spacing: 3px;
+}
+
+.fields {
+  width: 100%;
+  padding: 25px 5px 5px 5px;
+}
+
+.fields input {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 18px;
+  color: #555;
+  padding: 20px 10px 20px 5px;
+}
+
+.fields svg {
+  height: 22px;
+  margin: 0 10px -3px 25px;
+}
+
+.name, .cost, .iva, .price {
+  margin-bottom: 30px;
+  border-radius: 25px;
+  -webkit-box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #ffffff;
+          box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #ffffff;
+}
+
+.addButton {
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  height: 60px;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Lato', 'sans-serif';
+  color: #ffffff;
+  text-align: center;
+  background-color: #fc8424;
+  -webkit-box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
+          box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.addButton:hover {
+  background-color: #c65a06;
+}
+
+.addButton:active {
+  background-color: #aa4700;
+}
+
+.second {
+  width: 100%;
+  height: 50vh;
+  margin-top: 30px;
+}
+/*# sourceMappingURL=app.css.map */
