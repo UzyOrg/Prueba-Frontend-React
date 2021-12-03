@@ -5,12 +5,14 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import {Modal, ModalBody, ModalHeader, ModalFooter} from 'reactstrap'
 const _app = () => {
     
+    //Articulos inicializados 
     const dataArticulos = [
         {id: 1, nombre: "Leche LALA", precio: 24},
         {id: 2, nombre: "Pan bimbo", precio: 29},
         {id: 3, nombre: "Coca cola", precio: 14},
     ];
 
+    //Hooks de useState para guardar los estados de los inputs y los modales
     const [data, setData] = useState(dataArticulos);
     const [modalEditar, setModalEditar] = useState(false);
     const [modalEliminar, setModalEliminar] = useState(false);
@@ -21,14 +23,19 @@ const _app = () => {
         nombre:'',
         precio:''
     })
+
+    // Funcion para saber que articulo esta seleccionado en la tabla al momento de editar o eliminar
     const seleccionarArticulo = (elementos, caso) => {
         setArticuloSeleccionado(elementos);
         (caso==='Editar')?setModalEditar(true):setModalEliminar(true)
     }
+
+    // Abrir modal
     const abrirModalInsertar=()=>{
         setModalInsertar(true);
     }
 
+    // Guardar en el state lo que se escriba en los inputs
     const handleChange=e=>{
         const {name, value}=e.target;
         setArticuloSeleccionado((prevState)=>({
@@ -38,6 +45,7 @@ const _app = () => {
         console.log(articuloSeleccionado);
     }
     
+    // Boton editar
     const editar=()=>{
         var dataNueva=data;
         dataNueva.map(articulo=>{
@@ -51,12 +59,14 @@ const _app = () => {
         setModalEditar(false);
     }
     
+    // Boton eliminar
     const eliminar = () =>{
         setData(data.filter(articulo=>articulo.id!==articuloSeleccionado.id));
         setModalEliminar(false);
     }
 
-
+    // Boton insertar, se agarra el valor de lo que se escribio en los inputs y 
+    // se ponen en la tabla con iva incluido
     const insertar =()=>{
         var artiInsertar = articuloSeleccionado;
         artiInsertar.id=data[data.length-1].id+1;
@@ -70,6 +80,7 @@ const _app = () => {
     }
     return ( 
         <>
+        // El formulario
             <div className="login-parent">
                 <div className="login-container">
                     <div className="login-div">
@@ -105,6 +116,8 @@ const _app = () => {
                     </div>
                 </div>
             </div>
+
+            // Sección 2 con la tabla
             <div className="second container text-center">
                 <table className="table table-dark table-borderless">
                     <thead className="">
@@ -130,6 +143,8 @@ const _app = () => {
                     </tbody>
                 </table>
             </div>
+
+            // Modales
             <Modal centered isOpen={modalEditar}>
                 <ModalHeader>
                     <div>
